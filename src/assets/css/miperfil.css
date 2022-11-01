@@ -1,0 +1,37 @@
+.barra-usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+    background-color: rgb(211, 210, 210);
+    border: solid 1px rgb(151, 150, 150);
+    padding: 20px;
+    
+}
+.menu-usuario{
+    margin-top: 20px;
+}
+.main-usuario{
+    margin-top: 35px;
+    margin-left: 40px;
+}
+
+@media (max-width: 800px){
+    .contenedorPerfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .barra-usuario{
+        width: 90%;
+    }
+    .main-usuario{
+        width: 90%;
+    }
+    .name-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
