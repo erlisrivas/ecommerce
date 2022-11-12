@@ -1,112 +1,201 @@
 [
     {
-      "categoria":"vestido",
-      "id": "T001",
+        "id": 1,
+        "categoria": "vestidos",
       "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_9ad1568b-9c75-485b-a394-76e4f84c7ef0_600x.jpg?v=1665688053",
       "estado": "nuevo",
       "name": "Camisero Spring",
+      "talla": ["XS", "S", "M", "L", "XL"],   
       "liked": false,
-      "price": 19990
-      
+      "price": 19990,
+      "id-us": "U1"
     },
     {
-      "categoria": "vestido",
-      "id": "T002",
+        "id": 2,
+      "categoria": "vestidos",
       "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_8b75e97f-bc45-4102-a688-305f17558061_600x.jpg?v=1664818552",
       "estado": "nuevo",
       "name": "Camisero mangas rojo",
+      "talla": ["XS", "S", "M", "L", "XL"],  
       "liked": false,
-      "price": 15000
+      "price": 15000,
+      "id-us": "U1"
     },
     {
-        "categoria": "vestido",
-      "id": "T003",
-      "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_b0714b1c-f005-471d-806d-5766b5c716f6_600x.jpg?v=1661367041",
+        "id": 3,
+        "categoria": "vestidos",
+      "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_4d59a412-da08-4d5b-99eb-1beb936ebeea_600x.jpg?v=1665537918",
       "estado": "nuevo",
-      "name": "Maxi Vestido ZigZag",
+      "name": "Mini vestido full Colors",
+      "talla": ["S", "M", "XL"],  
       "liked": false,
-      "price": 19990
+      "price": 19990,
+      "id-us": "U1"
     },
-    {
+    { 
+        "id": 4,
         "categoria": "Enteritos",
-        "id": "T004",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_69926661-b2ea-467d-b54a-8982c5dc627b_400x.jpg?v=1639443954",
         "estado": "usado",
         "name": "Enterito Mezcilia",
+        "talla": ["XS", "S", "L", "XL"],  
         "liked": false,
-        "price": 15900
+        "price": 15900,
+        "id-us": "U1"
     },
     {
+        "id": 5,
         "categoria": "Enteritos",
-        "id": "T005",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_a9f33627-df3c-4470-823d-17a2f23d83d8_400x.jpg?v=1643849298",
         "estado": "usado",
         "name": "Enterito Multiforma floral",
+        "talla": ["XS", "S", "M", "L"],  
         "liked": false,
-        "price": 19990
+        "price": 19990,
+        "id-us": "U1"
     },
     {
+        "id": 6,
         "categoria": "Enteritos",
-        "id": "T006",
-        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/DSC06109_400x.jpg?v=1608324291",
+        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_912ea646-ac49-48e9-840c-72c617fa7c6a_600x.jpg?v=1642643853",
         "estado": "usado",
-        "name": "Enterito jardinera",
+        "name": "Mini enterito Gasa",
+        "talla": ["XS", "S", "M", "XL"],  
         "liked": false,
-        "price": 17990
+        "price": 17990,
+        "id-us": "U1"
     },
     {
+        "id": 7,
         "categoria": "Jardineras",
-        "id": "T007",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/DSC00155_86922c09-9bec-4c02-a39e-1adbfcbf2d52_400x.jpg?v=1647909131",
         "estado": "usado",
         "name": "Jardinera Mezcilla",
+        "talla": ["XS", "S", "L", "XL"],  
         "liked": false,
-        "price": 34990
+        "price": 34990,
+        "id-us": "U1"
     },
     {
+        "id": 8,
         "categoria": "Jardineras",
-        "id": "T008",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_4e725151-0612-4dd3-9c73-0388ca1c9f76_400x.jpg?v=1666129259",
         "estado": "usado",
         "name": "Jardinera Palazzo",
+        "talla": ["M", "L", "XL"],  
         "liked": false,
-        "price": 27990
+        "price": 27990,
+        "id-us": "U1"
     },
     {
+        "id": 9,
         "categoria": "Jardineras",
-        "id": "T009",
-        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/DSC09293_400x.jpg?v=1649537690",
+        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/DSC09293_981x1800.jpg?v=1649537690",
         "estado": "usado",
         "name": "Jardinera flores",
+        "talla": ["XS", "S", "M", "XL"],  
         "liked": false,
-        "price": 27990
+        "price": 27990,
+        "id-us": "U1"
     },
-    {
+    {   
+        "id": 10,
         "categoria": "Pantalones",
-        "id": "T0010",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/D_NQ_NP_2X_999197-CBT48060470222_102021-F_400x.webp?v=1647910351",
         "estado": "usado",
         "name": "Pantalon Eco cuero",
+        "talla": ["M", "L", "XL"],  
         "liked": false,
-        "price": 22990
+        "price": 22990,
+        "id-us": "U1"
     },
     {
+        "id": 11,
         "categoria": "Pantalones",
-        "id": "T0101",
-        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/DSC00899_400x.jpg?v=1604450789",
+        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_e92cbcfd-b8b6-46a1-8cff-c4684e45106e_600x.jpg?v=1664972137",
         "estado": "nuevo",
-        "name": "Pantalon Isidora",
+        "name": "Pantalon Lucrecia",
+        "talla": ["XS", "S", "L", "XL"],  
         "liked": false,
-        "price": 9990
+        "price": 13900,
+        "id-us": "U1"
     },
     {
+        "id": 12,
         "categoria": "Pantalones",
-        "id": "T0012",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/IMG_4772_400x.jpg?v=1635370666",
         "estado": "nuevo",
         "name": "Pantalon spain",
+        "talla": ["M", "L", "XL"],  
         "liked": false,
-        "price": 18990
+        "price": 18990,
+        "id-us": "U1"
+    },
+  
+
+  
+  
+
+    {
+        "id": 13,
+        "categoria": "vestidos",
+      "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_fe4c45ad-8038-4863-9cae-4bba1492295d_600x.jpg?v=1664411387",
+      "estado": "nuevo",
+      "name": "Maxi vestido Isabella",
+      "talla": ["XS", "S", "M", "L", "XL"],   
+      "liked": false,
+      "price": 19990,
+      "id-us": "U2"
+      
+      
+    },
+    {
+        "id": 14,
+      "categoria": "vestidos",
+      "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_f99d0f4c-d8d7-45df-811a-83063fa61ed5_600x.jpg?v=1640131322",
+      "estado": "nuevo",
+      "name": "Vestido tie dye",
+      "talla": ["XS", "S", "M", "L", "XL"],  
+      "liked": false,
+      "price": 17500,
+      "id-us": "U2"
+    },
+    {
+        "id": 15,
+        "categoria": "vestidos",
+      "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_54b98549-25f2-47cf-8987-0ea9293fdc6b_600x.jpg?v=1640047124",
+      "estado": "nuevo",
+      "name": "Vestido boho encajes",
+      "talla": ["S", "M", "XL"],  
+      "liked": false,
+      "price": 18990,
+      "id-us": "U2"
+    },
+    { 
+        "id": 16,
+        "categoria": "Enteritos",
+        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_8d6da7ac-18fd-44ef-bc92-92ab50067234_600x.jpg?v=1648684511",
+        "estado": "nuevo",
+        "name": "Enterito tropical",
+        "talla": ["XS", "S", "L", "XL"],  
+        "liked": false,
+        "price": 15900,
+        "id-us": "U2"
+    },
+    {
+        "id": 17,
+        "categoria": "Pantalon",
+        "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_bdc4dc65-1888-4b55-b001-eff48c1bac8b_600x.jpg?v=1664972377",
+        "estado": "nuevo",
+        "name": "Pantalon lucrecia envejecido",
+        "talla": ["XS", "S", "M", "L"],  
+        "liked": false,
+        "price": 19990,
+        "id-us": "U2"
     }
+  
+
   ]
+  
+
   

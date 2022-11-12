@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NavBar from "../componentes/NavBar"
 import Footer from '../componentes/Footer'
 import Header from '../componentes/Header'
-import Cards from '../componentes/Cards'
+
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
           className="btn btn-outline-primary" 
           type="button">
           Vender nuevo producto 
-          <i class="fa-duotone fa-cart-shopping-fast"></i>
+          <i className="fa-duotone fa-cart-shopping-fast"></i>
           </button>
         </Link>
       </div>
@@ -29,7 +29,7 @@ const Home = () => {
                       <option value="2">Precio de mayor a menor</option>
                     </select>
                   </div>
-      <Cards/>
+     
   
       <Footer/>
       </>

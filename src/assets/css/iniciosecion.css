@@ -3,15 +3,17 @@
     grid-template-areas: "login nav";
     grid-template-columns: 0.5fr 1fr;
     height: 100%;
+    
 }
 
 .nav{
     grid-area: nav;
     background-image: url(https://alster.law/wp-content/uploads/2020/06/Caso-de-Exito-Marketplace-Resized-scaled.jpg);
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center;    
+    background-repeat: no-repeat; 
     background-size: cover;
-    height: 100vh   ;
+    height:100vh;
+    
 }
 
 .login{
@@ -21,18 +23,28 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    border-right: solid 2px rgb(69, 69, 177);
+    border-right: solid 3px rgb(69, 69, 177);
+    
+    
     
 
 }
 .login-form{
     margin: 40px;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255,255,255,.2);
+    border-radius: 3em;
+    border: 2px solid rgba(255,255,255,.1);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+
 }
-    
 
 .btn{
     background-color:rgb(69, 69, 177);

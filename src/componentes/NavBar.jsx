@@ -1,12 +1,25 @@
-import React from 'react'
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
-import img5 from "../assets/img/img5.jpg"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import React, { useContext } from 'react'
+import Context from '../Contenxt'
 import { Link } from "react-router-dom";
-import logoN from "../assets/img/logoN.png"
 
+import logoN from "../assets/img/logoN.png"
+import img5 from "../assets/img/img5.jpg"
 
 const NavBar = () => {
+
+  const{buscador, setBuscador} = useContext (Context);
+
+  const seacher = (e) => {
+    setBuscador(e.target.value)
+    console.log (e.target.value)
+  }
+
+
   return (
     <>
 <header>
@@ -23,8 +36,14 @@ const NavBar = () => {
     
         <div className="col-md-4">
           <form className="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-            <input autoComplete="off" type="search" className="form-control rounded" placeholder="Search" />
-            <span className="input-group-text border-0 d-none d-lg-flex"><i className="fas fa-search"></i></span>
+            <input autoComplete="off" 
+            type="search" 
+            className="form-control rounded" 
+            placeholder="Search" 
+            value={buscador}
+            onChange= {seacher}/>
+            <span 
+            className="input-group-text border-0 d-none d-lg-flex"><i className="fas fa-search"></i></span>
           </form>
         </div>
   
@@ -54,32 +73,19 @@ const NavBar = () => {
     </div>
   </div>
 
-  <nav className="navbar navbar-expand-lg navbar-light bg-white shadow p-3 mb-2 bg-white rounded">
-
-      <div className="container-fluid justify-content-center justify-content-md-between">
-
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones"> 
-          <i className="fas fa-bars text-dark"></i> Categorías
-        </button>
-
-        <div className="collapse navbar-collapse" id="opciones">
-         <ul className="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
-            <li className="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-              <Link to="/Vestidos" className="nav-link" href="#">Vestidos</Link>
-            </li>
-            <li className="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-            <Link to="/Jardineras" className="nav-link">Jardineras</Link>
-            </li>
-            <li className="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-            <Link to="/Enteritos" className="nav-link">Enteritos</Link>
-            </li>
-            <li className="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-            <Link to="/Pantalon" className="nav-link" >Pantalon</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-  </nav>
+  <Navbar className="shadow p-3 mb-2 bg-white rounded" collapseOnSelect expand="lg" bg="ligth" variant="light">
+    <Container className="justify-content-center justify-content-md-between">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
+          <Link to="/Vestidos" className="nav-link" >Vestido</Link>
+          <Link to="/Enteritos" className="nav-link" >Enteritos</Link>
+          <Link to="/Jardineras" className="nav-link" >Jardineras</Link>
+          <Link to="/Pantalon" className="nav-link" >Pantalones</Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
 
 </header>
 </>

@@ -4,9 +4,10 @@ import Col from 'react-bootstrap/Col';
 import "../index.css";
 import Heart from "../componentes/Heart"
 
-import Context from '../Context'
+
 import { useNavigate } from "react-router-dom";
 import React, { useContext } from 'react'
+import Context from "../Contenxt"
 
 const Cards = () => {
   const{tienda, setTienda} = useContext (Context);
@@ -17,6 +18,8 @@ const Cards = () => {
       tienda[tiendaIndex].favorito = !tienda[tiendaIndex].favorito;
       setTienda([...tienda]);
     };
+  
+
 
   return (
     <div className="row m-4 align-items-center justify-content-center">

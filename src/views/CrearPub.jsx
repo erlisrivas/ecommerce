@@ -27,7 +27,7 @@ const CrearPub = () => {
                     <div className="col-12 col-md-6 mb-4">
                     <select className="form-select" aria-label="Default select example">
                       <option selected>Categoría</option>
-                      <option value="1">Vestido</option>
+                      <option value="1">Vestidos</option>
                       <option value="2">Enteritos</option>
                       <option value="3">Pantalon</option>
                       <option value="3">Jardineras</option>
@@ -55,8 +55,34 @@ const CrearPub = () => {
                   </div>
 
                   <div className="form-outline mb-4">
-                    <textarea className="form-control" id="form6Example7" rows="4"></textarea>
-                    <label className="form-label">Descripción</label>
+                  
+                  <h6>Selecciona la talla disponible:</h6>
+
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
+                    <label className="form-check-label" for="flexCheckIndeterminate">
+                    XS
+                    </label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
+                    <label className="form-check-label" for="flexCheckIndeterminate">
+                    S
+                    </label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
+                    <label className="form-check-label" for="flexCheckIndeterminate">
+                    M
+                    </label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
+                    <label className="form-check-label" for="flexCheckIndeterminate">
+                    XL
+                    </label>
+                  </div>
+                  
                   </div>
 
               

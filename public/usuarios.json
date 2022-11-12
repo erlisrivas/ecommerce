@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Garrido",
+        "correo": "juangarrido@gmail.com",
+        "clave": "G5205",
+        "Photo": ""
+     
+     
+    },
+    {
+        "id": 2,
+        "nombre": "Erika",
+        "apellido": "Gallardo",
+        "correo": "gallardo@gmail.com",
+        "clave": "G5206",
+        "Photo": ""
+    }
+
+]
