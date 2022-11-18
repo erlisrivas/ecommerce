@@ -3,12 +3,12 @@ import { Link} from "react-router-dom";
 import "../assets/css/iniciosecion.css"
 import { useNavigate } from "react-router-dom";
 import { useContext } from 'react'
-import Context from "../Contenxt"
+import Context from "../Context"
 
 import logoN from "../assets/img/logoN.png"
 
 const InicioSecion = () => {
-  const{usuario} = useContext (Context);
+  const{usuario, setAuth, auth} = useContext (Context);
   const [correo, setCorreo] = useState("");
   const [clave, setClave] = useState("");
 
@@ -21,15 +21,20 @@ const validarDatos = (e) =>{
   e.preventDefault();
   const found = usuario.find((i) => 
   i.correo === correo && i.clave === clave);
-    if (found){
+    if (usuario){
+      setAuth(true)
       Navigate("/Home")
   } if (correo === "" || clave === ""){
     alert ("debe ingresar todos los datos")
+    
   }
     else{
     setError(true);
+    
   }
 }
+console.log(auth)
+
 
   return (
 
@@ -62,7 +67,7 @@ const validarDatos = (e) =>{
             {error?<p className="small text-danger p-0">Credenciales invalidas</p>: null}
             <div className="row mb-4 mt-4">
               <div className="col">
-              <a href="#">¿Olvidaste tu contraseña?</a>
+              <a href="">¿Olvidaste tu contraseña?</a>
               </div>
             </div>
             <button type="submit" className="btn btn-block mb-4 mt-4">Ingresa a tu cuenta</button>

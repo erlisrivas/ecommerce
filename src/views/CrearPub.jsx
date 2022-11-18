@@ -1,8 +1,34 @@
-import React from 'react'
+
 import "../assets/css/registro.css"
 import img5 from "../assets/img/img5.jpg"
+import Context from "../Context"
+import { nanoid } from 'nanoid';
+import React, { useState, useContext} from 'react';
+
 
 const CrearPub = () => {
+  const{tienda} = useContext (Context);
+  const [foto, setFoto]= useState("");
+  const [categoria, setCategoria] = useState("");
+  const [estado, setEstado] = useState("");
+  const [nameProduct, setNameProduct] = useState("");
+  const [precio, setPrecio] = useState("");
+  const [talla, setTalla] = useState("");
+  const [error2, setError2] = useState (false);
+  const [newPub, setNewPub] = useState(tienda);
+
+  const agregarNewPub = (e) => {
+    e.preventDefault();
+    if (!foto.trim() || !categoria.trim() || !estado.trim() || !nameProduct.trim() || !precio.trim() || !talla.trim()){
+      setError2 (true);
+    }
+    else {
+      setNewPub([...newPub, { id: nanoid(), img: foto, categoria: categoria, estado: estado, name: nameProduct, talla: talla, pice: precio}])
+   
+    }
+  };
+
+  console.log(newPub);
   return (
     <section className="intro">
   <div className="bg-image-vertical h-100" style={{backgroundImage: `url(${img5})`}}
@@ -15,17 +41,25 @@ const CrearPub = () => {
               <div className="card-body p-5">
 
                 <h1 className="mb-5 text-center">Ingresar datos del producto</h1>
+                {error2?<p className="small text-danger p-0">Debes ingresar todos los datos</p>: null}
 
-                <form>
+                <form onSubmit={agregarNewPub}>
 
                 <div className="form-outline mb-4">
-                <input type="file" id="form6Example1" className="form-control" />
+                <input type="file" id="form6Example1" 
+                className="form-control" 
+                value={foto}
+                onChange = {(e) => setFoto(e.target.value)}/>
                     <label className="form-label" >Agregar Fotos</label>
                   </div>
                  
                   <div className="row">
                     <div className="col-12 col-md-6 mb-4">
-                    <select className="form-select" aria-label="Default select example">
+                    <select className="form-select" 
+                    aria-label="Default select example"
+                    value={categoria}
+                    onChange = {(e) => setCategoria(e.target.value)}
+                    >
                       <option selected>Categoría</option>
                       <option value="1">Vestidos</option>
                       <option value="2">Enteritos</option>
@@ -33,8 +67,13 @@ const CrearPub = () => {
                       <option value="3">Jardineras</option>
                     </select>
                     </div>
+
                     <div className="col-12 col-md-6 mb-4">
-                    <select className="form-select" aria-label="Default select example">
+                    <select className="form-select" 
+                    aria-label="Default select example"
+                    value={estado}
+                    onChange = {(e) => setEstado(e.target.value)}
+                    >
                       <option selected>Estado</option>
                       <option value="1">Nuevo</option>
                       <option value="2">Usado</option>
@@ -44,13 +83,19 @@ const CrearPub = () => {
 
                   
                   <div className="form-outline mb-4">
-                    <input type="text" id="form6Example3" className="form-control" />
+                    <input type="text"
+                    className="form-control"
+                    value={nameProduct}
+                    onChange = {(e) => setNameProduct(e.target.value)}/>
                     <label className="form-label" >Nombre del producto</label>
                   </div>
 
                  
                   <div className="form-outline mb-4">
-                    <input type="number" id="form6Example4" className="form-control" />
+                    <input type="number" 
+                    className="form-control" 
+                    value={precio}
+                    onChange = {(e) => setPrecio(e.target.value)}/>
                     <label className="form-label" >Precio del producto</label>
                   </div>
 
@@ -59,7 +104,12 @@ const CrearPub = () => {
                   <h6>Selecciona la talla disponible:</h6>
 
                   <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
+                    <input className="form-check-input" 
+                    type="checkbox" 
+                    value={talla}
+                    id="flexCheckIndeterminate"
+                    onChange = {(e) => setTalla(e.target.value)}
+                    />
                     <label className="form-check-label" for="flexCheckIndeterminate">
                     XS
                     </label>

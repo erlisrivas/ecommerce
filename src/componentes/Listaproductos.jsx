@@ -1,32 +1,66 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
 
 const Listaproductos = () => {
   return (
       <>
-    <div className ="container-fluid">
+          <div className ="container mt-5">
+            <div className ="card-mb-3 estilos">
+              <div className ="row g-0">
+                <div className ="col-md-6 mb-4">
+                  <img 
+                  src ="https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_8d6da7ac-18fd-44ef-bc92-92ab50067234_600x.jpg?v=1648684511"
+                  className= "img-fluid estilos rounded-start"
+                  alt = "img1"
+                  width={380}
+                  />
+                </div>
+              <div className="col-md-6">
+                <div className="card-body">
+                  <h3 className="card-title text-capitalize">camisa larga</h3>  
+                  <hr/>
+                  <p className="card-text">Estado: usado</p>
 
-      <div className="detalles bg-ligth w-200 m-auto">
-      
-            <div className="d-flex justify-content-between aling-item-center py-2"> 
+                  <div className="d-flex justify-content-start">
+                    <h4>$5000</h4> 
+                  </div>
+                  <div className="col-12 col-md-6 mb-4">
+                      <select className="form-select" 
+                      aria-label="Default select example"
+                      >
+                      <option selected>Tamaño:</option>
+                      <option value="1">S</option>
+                      <option value="2">M</option>
+                      <option value="3">L</option>
+                      <option value="3">XL</option>
+                    </select>
+                  </div>
+                  <div className="col-lg-2">
+                                        <div className="input-groupd d-flex">
+                                    <span className="input-group-btn">
+                                        <button className="quantity-left-minus btn btn-white btn-number"  >
+                                          -
+                                        </button>
+                                    </span>
+                                    <input type="text" id="quantity" name="quantity" className="form-control input-number" value ="1" min="1" max="100"/>
+                                    <span className="input-group-btn">
+                                        <button className="quantity-right-plus btn btn-white btn-number">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                        </div>
+                  <div className="d-flex justify-content-end mt-8">
+                    <h4>Total: $5000</h4> 
+                  </div>
 
-              <div className ="d-flex aling-item-center">
-                <img src="https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_9ad1568b-9c75-485b-a394-76e4f84c7ef0_600x.jpg?v=1665688053" width="60" alt=""/>
+                  <Button variant="primary">Añadir al carrito</Button>
+                </div>
               </div>
-              <div className ="d-flex aling-item-center">
-              <h5 className="mb-0 text-capitalize p-4">Camisero Spring</h5>
-              </div>
-              <div className ="d-flex justify-content-end aling-item-center">
-              <h5 className="mb-0 text-capitalize p-4">Talla:SM</h5>
-                <h5 className="mb-0 p-4 text-success">$19.990</h5>
-              </div>
-
-              <div className="clean bg-ligth p-4">x</div>
             </div>
-            
-       
-
-      </div>
-    </div>
+        </div>
+      
+       </div>
     </>
   )
 }

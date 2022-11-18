@@ -1,18 +1,22 @@
-import "../assets/css/registro.css"
-import img5 from "../assets/img/img5.jpg"
-import React, { useState, useContext} from 'react'
-import Context from "../Contenxt"
+import "../assets/css/registro.css";
+import img5 from "../assets/img/img5.jpg";
+import React, { useState, useContext} from 'react';
+import Context from "../Context";
 import { nanoid } from 'nanoid';
+import { useNavigate } from "react-router-dom";
+
 
 const Registro = () => {
+  const Navigate = useNavigate ();
   
-  const{usuario} = useContext (Context);
+  const{usuario, setUsuario} = useContext (Context);
   const [nombre, setNombre]= useState("");
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
   const [clave, setClave] = useState("");
   const [error, setError] = useState (false);
-  const [newRegister, setNewRegister] = useState(usuario);
+  
+ 
 
 
   const agregarNuevo = (e) => {
@@ -21,11 +25,11 @@ const Registro = () => {
       setError (true);
     }
     else {
-    setNewRegister([...newRegister, { id: nanoid(), nombre: nombre, apellido: apellido, correo: correo, clave: clave}])
-   
-    }
+    setUsuario([...usuario, { id: nanoid(), nombre: nombre, apellido: apellido, correo: correo, clave: clave}])
+    Navigate("/iniciosesion")
+  }
   };
-  console.log(newRegister);
+  console.log(usuario);
   
 
   return (

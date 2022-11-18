@@ -4,21 +4,25 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import React, { useContext } from 'react'
-import Context from '../Contenxt'
+import Context from '../Context'
 import { Link } from "react-router-dom";
 
 import logoN from "../assets/img/logoN.png"
 import img5 from "../assets/img/img5.jpg"
 
-const NavBar = () => {
+const NavBar = ({filterCategory}) => {
 
-  const{buscador, setBuscador} = useContext (Context);
+  const{agregarCar, buscador, setBuscador, setAuth, usuario} = useContext (Context);
 
+  const total = agregarCar.reduce(
+    (count) => count+1, 0);
+    
   const seacher = (e) => {
     setBuscador(e.target.value)
     console.log (e.target.value)
   }
 
+  const logout = () =>  setAuth (null)
 
   return (
     <>
@@ -52,16 +56,16 @@ const NavBar = () => {
         
             <Link to="/Carrito" className="text-reset me-3">
               <i className="fas fa-shopping-cart"></i>
-              <span className="badge rounded-pill badge-notification bg-danger">0</span>
+              <span className="badge rounded-pill badge-notification bg-danger">{total}</span>
             </Link>
             
             <Dropdown as={ButtonGroup}>
                     
-              <Dropdown.Toggle split variant="ligth" id="dropdown-custom-2"><img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" className="rounded-circle" height="22"
+              <Dropdown.Toggle split variant="ligth" id="dropdown-custom-2"><img src={usuario.photo} className="rounded-circle" height="22"
                   alt="" loading="lazy" />  </Dropdown.Toggle>
               <Dropdown.Menu>
-              <Dropdown.Item ><Link className="text-dark"to="/MiPerfil">Mi perfil</Link></Dropdown.Item>
-              <Dropdown.Item ><Link className="text-dark"to="/">Cerrar sesión</Link></Dropdown.Item>
+              <Dropdown.Item ><Link className="text-dark text-decoration-none"to="/MiPerfil">Mi perfil</Link></Dropdown.Item>
+              <Dropdown.Item onClick={logout}>Cerrar sesión</Dropdown.Item>
               </Dropdown.Menu>
               </Dropdown>
 
@@ -78,7 +82,7 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-          <Link to="/Vestidos" className="nav-link" >Vestido</Link>
+          <div onClick={() => filterCategory()}><Link to="/Vestidos" className="nav-link" >Vestido</Link></div>
           <Link to="/Enteritos" className="nav-link" >Enteritos</Link>
           <Link to="/Jardineras" className="nav-link" >Jardineras</Link>
           <Link to="/Pantalon" className="nav-link" >Pantalones</Link>
