@@ -25,11 +25,11 @@ import Context from './Context';
 
 
 function App() {
-    const [tienda, setTienda] = useState([]);
-    const [usuario, setUsuario] = useState([]);
-    const [agregarCar, setAgregarCar] = useState ([]);
-    const [buscador, setBuscador] = useState("");
-    const [auth,setAuth] = useState(false);
+    const [tienda, setTienda] = useState([]); //para llamar datos de mi json tienda
+    const [usuario, setUsuario] = useState([]); //para llamar datosde mi json usuarios
+    const [agregarCar, setAgregarCar] = useState ([]); // para agregar a carrito de compra
+    const [buscador, setBuscador] = useState(""); //para filtrar por nombredesde el buscador
+    const [auth,setAuth] = useState(null);  // para autenticar usuario
 
 const getTienda = async () => {
     const res = await fetch ('http://localhost:3000/tienda.json')

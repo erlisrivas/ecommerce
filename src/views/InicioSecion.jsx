@@ -21,13 +21,13 @@ const validarDatos = (e) =>{
   e.preventDefault();
   const found = usuario.find((i) => 
   i.correo === correo && i.clave === clave);
-    if (usuario){
-      setAuth(true)
+    if (found){
+      setAuth({found})
       Navigate("/Home")
-  } if (correo === "" || clave === ""){
-    alert ("debe ingresar todos los datos")
-    
-  }
+    } if (correo === "" || clave === ""){
+      alert ("debe ingresar todos los datos")
+      
+    }
     else{
     setError(true);
     
