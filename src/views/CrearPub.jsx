@@ -1,9 +1,11 @@
 
 import "../assets/css/registro.css"
 import img5 from "../assets/img/img5.jpg"
-import Context from "../Context"
+
+
 import { nanoid } from 'nanoid';
 import React, { useState, useContext} from 'react';
+import Context from "../Context"
 
 
 const CrearPub = () => {
@@ -15,7 +17,6 @@ const CrearPub = () => {
   const [estado, setEstado] = useState("");
   const [nameProduct, setNameProduct] = useState("");
   const [precio, setPrecio] = useState("");
-  
   const [error2, setError2] = useState (false);
   const [newPub, setNewPub] = useState(tienda);
 
@@ -106,11 +107,6 @@ const CrearPub = () => {
                     onChange = {(e) => setPrecio(e.target.value)}/>
                     <label className="form-label" >Precio del producto</label>
                   </div>
-
-                  
-                 
-
-              
                   <button type="submit" className="btn btn-secondary btn-rounded btn-block">Crear Publicación</button>
                 </form>
 

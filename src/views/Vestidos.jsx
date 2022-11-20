@@ -26,11 +26,9 @@ const Vestidos = () => {
       setProducto(filteredData)
     }
 
-    
-
   return (
     <>
-      <NavBar filterCategory={filterCategory}/>
+      <NavBar/>
 
       <div className="container d-flex justify-content-center mt-3 mx-4">
         <h5 className="titleCat">Vestidos</h5>
@@ -38,12 +36,8 @@ const Vestidos = () => {
       <hr/>
 
       <div className="galeria grid-columns-4 p-3">
-      
-        
-          <ProductoFilter producto={producto}/>
-         
-          
 
+          <ProductoFilter producto={producto}/>
       </div>
 
 

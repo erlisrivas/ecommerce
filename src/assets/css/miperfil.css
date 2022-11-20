@@ -33,5 +33,11 @@
         justify-content: center;
         align-items: center;
     }
+    .contenedorFav{
+        display: flex;
+        flex-direction: column;
+    }
+    
 
 }
+

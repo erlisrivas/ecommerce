@@ -1,36 +1,36 @@
-import React, { useState} from 'react'
-import { Link} from "react-router-dom";
-import "../assets/css/iniciosecion.css"
-import { useNavigate } from "react-router-dom";
-import { useContext } from 'react'
-import Context from "../Context"
+import "../assets/css/iniciosesion.css";
+import logoN from "../assets/img/logoN.png";
 
-import logoN from "../assets/img/logoN.png"
+import React, { useState, useContext } from 'react';
+import { Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Context from "../Context";
 
 const InicioSecion = () => {
+
   const{tienda, usuario, setAuth, setUsu} = useContext (Context);
+
   const [correo, setCorreo] = useState("");
   const [clave, setClave] = useState("");
-
   const [error, setError] = useState (false);
   const Navigate = useNavigate ();
 
 
   
-const validarDatos = (e) =>{
-  e.preventDefault();
-  const found = usuario.find((i) => 
-  i.correo === correo && i.clave === clave);
+  const validarDatos = (e) =>{
+    e.preventDefault();
+    const found = usuario.find((i) => 
+    i.correo === correo && i.clave === clave);
     if (found){
       setAuth(true);
       setUsu(found);
       Navigate("/Home")
       tienda.forEach(e => {
-        if (
-          found.liked?.includes(e.id)
+      if (
+        found.liked?.includes(e.id)
         ){
           e.liked = true 
-        }else{
+      }else{
           e.liked = false
         }
       })
@@ -44,8 +44,6 @@ const validarDatos = (e) =>{
     
   }
 }
-
-
 
   return (
 

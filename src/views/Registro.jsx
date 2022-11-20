@@ -1,24 +1,23 @@
 import "../assets/css/registro.css";
 import img5 from "../assets/img/img5.jpg";
+
 import React, { useState, useContext} from 'react';
-import Context from "../Context";
 import { nanoid } from 'nanoid';
 import { useNavigate } from "react-router-dom";
+import Context from "../Context";
 
 
 const Registro = () => {
+
   const Navigate = useNavigate ();
-  
   const{usuario, setUsuario} = useContext (Context);
+
   const [nombre, setNombre]= useState("");
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
   const [clave, setClave] = useState("");
   const [error, setError] = useState (false);
   
- 
-
-
   const agregarNuevo = (e) => {
     e.preventDefault();
     if (!nombre.trim() || !apellido.trim() || !correo.trim() || !clave.trim()){
@@ -29,8 +28,7 @@ const Registro = () => {
     Navigate("/iniciosesion")
   }
   };
-  //console.log(usuario);
-  
+  console.log(usuario);
 
   return (
     <section className="intro">

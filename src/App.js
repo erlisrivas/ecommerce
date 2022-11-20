@@ -2,10 +2,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {useState, useEffect } from 'react';
+import Context from './Context';
 
 
 import Registro from "./views/Registro";
-import InicioSecion from './views/InicioSecion';
+import InicioSesion from './views/InicioSesion';
 import Home from "./views/Home"
 import MiPerfil from "./views/MiPerfil";
 import Detalle from "./views/Detalle";
@@ -19,41 +20,36 @@ import CrearPub from "./views/CrearPub"
 import {PrivateRoute} from "./componentes/PrivateRoute"
 
 
-
-
-import Context from './Context';
-
-
 function App() {
+
     const [tienda, setTienda] = useState([]); //para llamar datos de mi json tienda
     const [usuario, setUsuario] = useState([]); //para llamar datosde mi json usuarios
     const [agregarCar, setAgregarCar] = useState ([]); // para agregar a carrito de compra
-    const [buscador, setBuscador] = useState(""); //para filtrar por nombredesde el buscador
-    const [usu, setUsu] = useState (null);
+    const [buscador, setBuscador] = useState(""); //para filtrar por nombre desde el buscador
+    const [usu, setUsu] = useState (null); //para guardar usuario al iniciar sesion
     const [auth,setAuth] = useState(false);  // para autenticar usuario
   
     
+//llamado de json tienda
+    const getTienda = async () => {
+      const res = await fetch ('http://localhost:3000/tienda.json');
+      const data = await res.json();
+      setTienda(data);
+      //console.log(data);
+    };
 
-const getTienda = async () => {
-    const res = await fetch ('http://localhost:3000/tienda.json');
-    const data = await res.json();
-    setTienda(data);
+//llamado de json usuarios
+    const getUsuarios = async () => {
+      const res = await fetch ('http://localhost:3000/usuarios.json')
+      const data = await res.json()
+      setUsuario(data);
     //console.log(data);
-  };
+    };
 
-  const getUsuarios = async () => {
-    const res = await fetch ('http://localhost:3000/usuarios.json')
-    const data = await res.json()
-    setUsuario(data);
-    //console.log(data);
-    
-  };
-  useEffect(() => {
-    getUsuarios();
-    getTienda();
-  }, []);
-
-  const logout = () =>  setAuth (false) 
+    useEffect(() => {
+      getUsuarios();
+      getTienda();
+    }, []);
 
 //funciones para el carrrito de compra
 
@@ -66,27 +62,23 @@ const add = ({id, price, name, img}) => {
     setAgregarCar([...agregarCar]);
   } else{
     setAgregarCar ([...agregarCar, producto]);
-  }
-};
+    }
+  };
 
-const incrementar = (i) => {
-  agregarCar[i].count++;
+  const incrementar = (i) => {
+    agregarCar[i].count++;
   setAgregarCar([...agregarCar]);
-};
+  };
 
-const decrement = (i) => {
-  const {count} = agregarCar[i];
-  if (count === 1) {
+  const decrement = (i) => {
+    const {count} = agregarCar[i];
+    if (count === 1) {
     agregarCar.splice(i, 1);
-  } else {
+    } else {
     agregarCar[i].count--;
-  }
+    }
   setAgregarCar([...agregarCar]);
-};
-
-
-
-
+  };
 
   return (
     <div className="App">
@@ -97,11 +89,12 @@ const decrement = (i) => {
               auth, setAuth,
               agregarCar, setAgregarCar,
               incrementar, decrement, add,
-              logout, setUsu, usu}}>
+              usu, setUsu}}>
+
         <BrowserRouter>
         <Routes>
-        <Route path="/" element={<InicioSecion/>} />
-        <Route path="/iniciosesion" element={<InicioSecion/>} />
+        <Route path="/" element={<InicioSesion/>} />
+        <Route path="/iniciosesion" element={<InicioSesion/>} />
         <Route path="/registro" element={<Registro />} />
        
         <Route path="/home" element={
@@ -146,8 +139,7 @@ const decrement = (i) => {
         }/>
         <Route path="/detalle/:id" element={
           
-          
-            <Detalle />
+        <Detalle />
           
         } />
         </Routes>
