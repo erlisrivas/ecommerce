@@ -32,7 +32,7 @@ function App() {
     
 //llamado de json tienda
     const getTienda = async () => {
-      const res = await fetch ('http://localhost:3000/tienda.json');
+      const res = await fetch ('https://proyecto-react-nine.vercel.app/tienda.json');
       const data = await res.json();
       setTienda(data);
       //console.log(data);
@@ -40,7 +40,7 @@ function App() {
 
 //llamado de json usuarios
     const getUsuarios = async () => {
-      const res = await fetch ('http://localhost:3000/usuarios.json')
+      const res = await fetch ('https://proyecto-react-nine.vercel.app/usuarios.json')
       const data = await res.json()
       setUsuario(data);
     //console.log(data);
@@ -138,9 +138,9 @@ const add = ({id, price, name, img}) => {
           </PrivateRoute>
         }/>
         <Route path="/detalle/:id" element={
-          
-        <Detalle />
-          
+          <PrivateRoute auth = {auth}>
+            <Detalle />
+          </PrivateRoute>
         } />
         </Routes>
         </BrowserRouter>
