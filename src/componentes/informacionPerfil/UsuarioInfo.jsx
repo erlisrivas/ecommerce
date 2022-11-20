@@ -30,8 +30,8 @@ const UsuarioInfo = () => {
                     <h3 className="card-title text-capitalize">{usu.nombre}{"  "}{usu.apellido}</h3>  
                     <hr/>
                     <p className="card-text">{usu.correo}</p>
-                    <p className="card-text">Telefono: +56 958 85 47</p>
-                    <p className="card-text">Dirección: av Sor vicenta, Los Angeles</p>
+                    <p className="card-text">Telefono: {usu.phono}</p>
+                    <p className="card-text">Dirección: {usu.direccion}</p>
                   </div>
                 </div>
               </div>

@@ -31,14 +31,14 @@ function App() {
     const [buscador, setBuscador] = useState(""); //para filtrar por nombredesde el buscador
     const [usu, setUsu] = useState (null);
     const [auth,setAuth] = useState(false);  // para autenticar usuario
+  
     
 
 const getTienda = async () => {
-    const res = await fetch ('http://localhost:3000/tienda.json')
-    const data = await res.json()
+    const res = await fetch ('http://localhost:3000/tienda.json');
+    const data = await res.json();
     setTienda(data);
-    //console.log(data)
-    
+    //console.log(data);
   };
 
   const getUsuarios = async () => {
@@ -145,9 +145,10 @@ const decrement = (i) => {
           </PrivateRoute>
         }/>
         <Route path="/detalle/:id" element={
-          <PrivateRoute auth = {auth}>
+          
+          
             <Detalle />
-          </PrivateRoute>
+          
         } />
         </Routes>
         </BrowserRouter>

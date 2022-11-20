@@ -107,41 +107,8 @@ const CrearPub = () => {
                     <label className="form-label" >Precio del producto</label>
                   </div>
 
-                  <div className="form-outline mb-4">
                   
-                  <h6>Selecciona la talla disponible:</h6>
-
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" 
-                    type="checkbox" 
-                    
-                    id="flexCheckIndeterminate"
-                   
-                    />
-                    <label className="form-check-label" for="flexCheckIndeterminate">
-                    XS
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
-                    <label className="form-check-label" for="flexCheckIndeterminate">
-                    S
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
-                    <label className="form-check-label" for="flexCheckIndeterminate">
-                    M
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"/>
-                    <label className="form-check-label" for="flexCheckIndeterminate">
-                    XL
-                    </label>
-                  </div>
-                  
-                  </div>
+                 
 
               
                   <button type="submit" className="btn btn-secondary btn-rounded btn-block">Crear Publicación</button>

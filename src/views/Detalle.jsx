@@ -1,17 +1,24 @@
-import {useState, useEffect, useContext} from "react";
+import React, { useContext } from 'react'
+import Context from "../Context"
+
+import {useEffect} from "react"
+import {useState } from 'react'
 import {useParams} from "react-router-dom"
-import Context from '../Context'
-import Button from 'react-bootstrap/Button';
+
+import Button from 'react-bootstrap/Button'
 
 
 const Detalle = () => {
-  const [productDetail, setProductoDetail] = useState ({});
-  const {tienda, add} = useContext(Context);
+
   const {id} = useParams();
+  const {tienda, add} = useContext (Context);
+  console.log(tienda);
+  const [productDetail, setProductoDetail] = useState ({});
+  //console.log(tienda);
 
   const obtenerDatos = () => { 
-    const datosProducto = tienda.find((tienda) => tienda.id === id);
-    setProductoDetail (datosProducto);
+    const datosProducto = tienda.find((tienda) => tienda.id == id);
+    setProductoDetail(datosProducto);
    
   };
 
@@ -19,7 +26,7 @@ const Detalle = () => {
     obtenerDatos();
   }, [tienda]);
 
-  console.log(productDetail)
+  
 
   return (
     <>

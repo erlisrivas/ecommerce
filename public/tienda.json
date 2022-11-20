@@ -8,18 +8,18 @@
       "talla": ["XS", "S", "M", "L", "XL"],   
       "liked": false,
       "price": 19990,
-      "id-us": "U1"
+      "idUs": "1"
     },
     {
-        "id": 2,
+      "id": 2,
       "categoria": "vestidos",
-      "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_8b75e97f-bc45-4102-a688-305f17558061_600x.jpg?v=1664818552",
+      "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_8b75e97f-bc45-4102-a688-305f17558061_600x.jpg",
       "estado": "nuevo",
       "name": "Camisero mangas rojo",
       "talla": ["XS", "S", "M", "L", "XL"],  
       "liked": false,
       "price": 15000,
-      "id-us": "U1"
+      "idUs": "1"
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
       "talla": ["S", "M", "XL"],  
       "liked": false,
       "price": 19990,
-      "id-us": "U1"
+      "idUs": "1"
     },
     { 
         "id": 4,
@@ -41,7 +41,7 @@
         "talla": ["XS", "S", "L", "XL"],  
         "liked": false,
         "price": 15900,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {
         "id": 5,
@@ -52,7 +52,7 @@
         "talla": ["XS", "S", "M", "L"],  
         "liked": false,
         "price": 19990,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {
         "id": 6,
@@ -63,7 +63,7 @@
         "talla": ["XS", "S", "M", "XL"],  
         "liked": false,
         "price": 17990,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {
         "id": 7,
@@ -74,7 +74,7 @@
         "talla": ["XS", "S", "L", "XL"],  
         "liked": false,
         "price": 34990,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {
         "id": 8,
@@ -85,7 +85,7 @@
         "talla": ["M", "L", "XL"],  
         "liked": false,
         "price": 27990,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {
         "id": 9,
@@ -96,7 +96,7 @@
         "talla": ["XS", "S", "M", "XL"],  
         "liked": false,
         "price": 27990,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {   
         "id": 10,
@@ -107,7 +107,7 @@
         "talla": ["M", "L", "XL"],  
         "liked": false,
         "price": 22990,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {
         "id": 11,
@@ -118,7 +118,7 @@
         "talla": ["XS", "S", "L", "XL"],  
         "liked": false,
         "price": 13900,
-        "id-us": "U1"
+        "idUs": "1"
     },
     {
         "id": 12,
@@ -129,7 +129,7 @@
         "talla": ["M", "L", "XL"],  
         "liked": false,
         "price": 18990,
-        "id-us": "U1"
+        "idUs": "1"
     },
   
 
@@ -145,7 +145,7 @@
       "talla": ["XS", "S", "M", "L", "XL"],   
       "liked": false,
       "price": 19990,
-      "id-us": "U2"
+      "idUs": "2"
       
       
     },
@@ -158,7 +158,7 @@
       "talla": ["XS", "S", "M", "L", "XL"],  
       "liked": false,
       "price": 17500,
-      "id-us": "U2"
+      "idUs": "2"
     },
     {
         "id": 15,
@@ -169,7 +169,7 @@
       "talla": ["S", "M", "XL"],  
       "liked": false,
       "price": 18990,
-      "id-us": "U2"
+      "idUs": "2"
     },
     { 
         "id": 16,
@@ -180,7 +180,7 @@
         "talla": ["XS", "S", "L", "XL"],  
         "liked": false,
         "price": 15900,
-        "id-us": "U2"
+        "idUs": "2"
     },
     {
         "id": 17,
@@ -191,7 +191,7 @@
         "talla": ["XS", "S", "M", "L"],  
         "liked": false,
         "price": 19990,
-        "id-us": "U2"
+        "idUs": "2"
     }
   
 

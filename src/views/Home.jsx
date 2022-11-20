@@ -14,7 +14,7 @@ const Home = () => {
   const{tienda, setTienda, buscador} = useContext (Context);
 
   const resultado = !buscador? tienda : tienda.filter((elem) => elem.name
-   .toLowerCase()
+  .toLowerCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "")
    .includes(buscador.toLocaleLowerCase()));
@@ -94,11 +94,13 @@ const Home = () => {
                     </select>
                   </div>
 
-                <div className="grilla-plantas">
-                {resultado.map((el) => (
-                <Cards key={el.id}/>
+                  <div className="row m-4 align-items-center justify-content-center">
+                {resultado.map((filterP, index) => (
+                <Cards key={index}
+                filterP={filterP}/>
                   ))}
-            </div>
+                  </div>
+            
       <Footer/>
       </>
       

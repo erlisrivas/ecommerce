@@ -22,7 +22,7 @@ const Vestidos = () => {
         return
       }
   
-      const filteredData = tienda.filter(art => art.categoria === categoria);
+      const filteredData = tienda.filter((e) => e.categoria === categoria);
       setProducto(filteredData)
     }
 

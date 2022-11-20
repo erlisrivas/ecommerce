@@ -40,10 +40,10 @@ const NavBar = ({filterCategory}) => {
     
         <div className="col-md-4">
           <form className="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-            <input autoComplete="off" 
+            <input 
             type="search" 
             className="form-control rounded" 
-            placeholder="Search" 
+            placeholder="buscar producto" 
             value={buscador}
             onChange= {seacher}/>
             <span 
@@ -82,7 +82,7 @@ const NavBar = ({filterCategory}) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-          <div onClick={() => filterCategory()}><Link to="/Vestidos" className="nav-link" >Vestido</Link></div>
+          <div onClick={filterCategory}><Link to="/Vestidos" className="nav-link" >Vestido</Link></div>
           <Link to="/Enteritos" className="nav-link" >Enteritos</Link>
           <Link to="/Jardineras" className="nav-link" >Jardineras</Link>
           <Link to="/Pantalon" className="nav-link" >Pantalones</Link>

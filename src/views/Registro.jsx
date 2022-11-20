@@ -29,7 +29,7 @@ const Registro = () => {
     Navigate("/iniciosesion")
   }
   };
-  console.log(usuario);
+  //console.log(usuario);
   
 
   return (

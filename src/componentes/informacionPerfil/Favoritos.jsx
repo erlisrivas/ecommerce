@@ -17,11 +17,11 @@ const Favoritos = () => {
   return (
     <>
     
-        <div className="text-capitalize mb-4">
-          <h3 >Mis Favoritos</h3>
+        <div className="text-capitalize mb-4 mx-5">
+          <h4 >Mis Favoritos</h4>
         </div>
 
-        <div>
+        <div className="">
         {tienda.filter((elem)=>elem.liked).map((elem) =>(
         <div className="infoFav d-flex justify-content-between aling-content-center mb-2" key={elem.id}>
         
