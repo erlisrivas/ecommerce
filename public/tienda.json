@@ -34,7 +34,7 @@
     },
     { 
         "id": 4,
-        "categoria": "Enteritos",
+        "categoria": "enteritos",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_69926661-b2ea-467d-b54a-8982c5dc627b_400x.jpg?v=1639443954",
         "estado": "usado",
         "name": "Enterito Mezcilia",
@@ -45,7 +45,7 @@
     },
     {
         "id": 5,
-        "categoria": "Enteritos",
+        "categoria": "enteritos",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_a9f33627-df3c-4470-823d-17a2f23d83d8_400x.jpg?v=1643849298",
         "estado": "usado",
         "name": "Enterito Multiforma floral",
@@ -56,7 +56,7 @@
     },
     {
         "id": 6,
-        "categoria": "Enteritos",
+        "categoria": "enteritos",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_912ea646-ac49-48e9-840c-72c617fa7c6a_600x.jpg?v=1642643853",
         "estado": "usado",
         "name": "Mini enterito Gasa",
@@ -67,7 +67,7 @@
     },
     {
         "id": 7,
-        "categoria": "Jardineras",
+        "categoria": "jardineras",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/DSC00155_86922c09-9bec-4c02-a39e-1adbfcbf2d52_400x.jpg?v=1647909131",
         "estado": "usado",
         "name": "Jardinera Mezcilla",
@@ -78,7 +78,7 @@
     },
     {
         "id": 8,
-        "categoria": "Jardineras",
+        "categoria": "jardineras",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_4e725151-0612-4dd3-9c73-0388ca1c9f76_400x.jpg?v=1666129259",
         "estado": "usado",
         "name": "Jardinera Palazzo",
@@ -89,7 +89,7 @@
     },
     {
         "id": 9,
-        "categoria": "Jardineras",
+        "categoria": "jardineras",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/DSC09293_981x1800.jpg?v=1649537690",
         "estado": "usado",
         "name": "Jardinera flores",
@@ -100,7 +100,7 @@
     },
     {   
         "id": 10,
-        "categoria": "Pantalones",
+        "categoria": "pantalones",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/D_NQ_NP_2X_999197-CBT48060470222_102021-F_400x.webp?v=1647910351",
         "estado": "usado",
         "name": "Pantalon Eco cuero",
@@ -111,7 +111,7 @@
     },
     {
         "id": 11,
-        "categoria": "Pantalones",
+        "categoria": "pantalones",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_e92cbcfd-b8b6-46a1-8cff-c4684e45106e_600x.jpg?v=1664972137",
         "estado": "nuevo",
         "name": "Pantalon Lucrecia",
@@ -122,7 +122,7 @@
     },
     {
         "id": 12,
-        "categoria": "Pantalones",
+        "categoria": "pantalones",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/IMG_4772_400x.jpg?v=1635370666",
         "estado": "nuevo",
         "name": "Pantalon spain",
@@ -173,7 +173,7 @@
     },
     { 
         "id": 16,
-        "categoria": "Enteritos",
+        "categoria": "enteritos",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_8d6da7ac-18fd-44ef-bc92-92ab50067234_600x.jpg?v=1648684511",
         "estado": "nuevo",
         "name": "Enterito tropical",
@@ -184,7 +184,7 @@
     },
     {
         "id": 17,
-        "categoria": "Pantalon",
+        "categoria": "pantalones",
         "img": "https://cdn.shopify.com/s/files/1/0022/2101/5151/products/image_bdc4dc65-1888-4b55-b001-eff48c1bac8b_600x.jpg?v=1664972377",
         "estado": "nuevo",
         "name": "Pantalon lucrecia envejecido",

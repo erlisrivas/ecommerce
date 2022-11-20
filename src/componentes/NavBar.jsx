@@ -12,7 +12,7 @@ import img5 from "../assets/img/img5.jpg"
 
 const NavBar = ({filterCategory}) => {
 
-  const{agregarCar, buscador, setBuscador, setAuth, usuario} = useContext (Context);
+  const{agregarCar, buscador, setBuscador, usu, logout} = useContext (Context);
 
   const total = agregarCar.reduce(
     (count) => count+1, 0);
@@ -22,7 +22,7 @@ const NavBar = ({filterCategory}) => {
     console.log (e.target.value)
   }
 
-  const logout = () =>  setAuth (null)
+  
 
   return (
     <>
@@ -61,7 +61,7 @@ const NavBar = ({filterCategory}) => {
             
             <Dropdown as={ButtonGroup}>
                     
-              <Dropdown.Toggle split variant="ligth" id="dropdown-custom-2"><img src={usuario.photo} className="rounded-circle" height="22"
+              <Dropdown.Toggle split variant="ligth" id="dropdown-custom-2"><img src={usu.photo} className="rounded-circle" height="26" width="26"
                   alt="" loading="lazy" />  </Dropdown.Toggle>
               <Dropdown.Menu>
               <Dropdown.Item ><Link className="text-dark text-decoration-none"to="/MiPerfil">Mi perfil</Link></Dropdown.Item>

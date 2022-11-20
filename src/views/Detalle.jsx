@@ -43,15 +43,7 @@ const Detalle = () => {
                   <div className="d-flex justify-content-start">
                     <h4>{productDetail.price}</h4> 
                   </div>
-                  <div className="col-12 col-md-6 mb-4">
-                      <select className="form-select" 
-                      aria-label="Default select example"
-                      >
-                        {productDetail.talla?.map((talla, i) =>(
-                      <option key={i}>{talla}</option>
-                 ))}
-                    </select>
-                  </div>
+                 
                   <div className="col-lg-2">
                     <div className="input-groupd d-flex">
                         <span className="input-group-btn">

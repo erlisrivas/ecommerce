@@ -1,9 +1,9 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-export const PrivateRoute = ({auth, redirectTo = "/iniciosesion"}) => {
+export const PrivateRoute = ({auth, children, redirecTo = "/iniciosesion"}) => {
     if (!auth){
-        return <Navigate to= {redirectTo}/>
+        return <Navigate to= {redirecTo}/>
     }
-  return <Outlet/>;
+  return children;
 };
 

@@ -8,22 +8,30 @@ import React, { useState, useContext} from 'react';
 
 const CrearPub = () => {
   const{tienda} = useContext (Context);
+
+  //capturando información del formulario
   const [foto, setFoto]= useState("");
   const [categoria, setCategoria] = useState("");
   const [estado, setEstado] = useState("");
   const [nameProduct, setNameProduct] = useState("");
   const [precio, setPrecio] = useState("");
-  const [talla, setTalla] = useState("");
+  
   const [error2, setError2] = useState (false);
   const [newPub, setNewPub] = useState(tienda);
 
   const agregarNewPub = (e) => {
     e.preventDefault();
-    if (!foto.trim() || !categoria.trim() || !estado.trim() || !nameProduct.trim() || !precio.trim() || !talla.trim()){
+    if (!foto.trim() || !categoria.trim() || !estado.trim() || !nameProduct.trim() || !precio.trim() ){
       setError2 (true);
     }
     else {
-      setNewPub([...newPub, { id: nanoid(), img: foto, categoria: categoria, estado: estado, name: nameProduct, talla: talla, pice: precio}])
+      setNewPub([...newPub, { id: nanoid(), 
+                              img: foto, 
+                              categoria: categoria, 
+                              estado: estado, 
+                              name: nameProduct, 
+                              liked: false,
+                              price: precio}])
    
     }
   };
@@ -61,10 +69,10 @@ const CrearPub = () => {
                     onChange = {(e) => setCategoria(e.target.value)}
                     >
                       <option selected>Categoría</option>
-                      <option value="1">Vestidos</option>
-                      <option value="2">Enteritos</option>
-                      <option value="3">Pantalon</option>
-                      <option value="3">Jardineras</option>
+                      <option value="vestidos">Vestidos</option>
+                      <option value="enteritos">Enteritos</option>
+                      <option value="pantalon">Pantalon</option>
+                      <option value="jardineras">Jardineras</option>
                     </select>
                     </div>
 
@@ -75,8 +83,8 @@ const CrearPub = () => {
                     onChange = {(e) => setEstado(e.target.value)}
                     >
                       <option selected>Estado</option>
-                      <option value="1">Nuevo</option>
-                      <option value="2">Usado</option>
+                      <option value="nuevo">Nuevo</option>
+                      <option value="usado">Usado</option>
                     </select>
                   </div>
                   </div>
@@ -106,9 +114,9 @@ const CrearPub = () => {
                   <div className="form-check form-check-inline">
                     <input className="form-check-input" 
                     type="checkbox" 
-                    value={talla}
+                    
                     id="flexCheckIndeterminate"
-                    onChange = {(e) => setTalla(e.target.value)}
+                   
                     />
                     <label className="form-check-label" for="flexCheckIndeterminate">
                     XS

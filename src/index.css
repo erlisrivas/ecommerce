@@ -6,3 +6,12 @@
     color: #b279cf;
     font-style: italic;
 }
+.nombreCat{
+    color: #a412ec;
+    font-style: italic;
+}
+.carInfo{
+    -webkit-box-shadow: 6px 7px 5px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 7px 5px 9px rgba(0,0,0,0.75);
+    box-shadow: 6px 7px 5px 9px rgba(0,0,0,0.75);
+}

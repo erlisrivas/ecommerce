@@ -8,7 +8,7 @@ import Context from "../Context"
 import logoN from "../assets/img/logoN.png"
 
 const InicioSecion = () => {
-  const{usuario, setAuth, auth} = useContext (Context);
+  const{tienda, usuario, setAuth, setUsu} = useContext (Context);
   const [correo, setCorreo] = useState("");
   const [clave, setClave] = useState("");
 
@@ -22,8 +22,19 @@ const validarDatos = (e) =>{
   const found = usuario.find((i) => 
   i.correo === correo && i.clave === clave);
     if (found){
-      setAuth({found})
+      setAuth(true);
+      setUsu(found);
       Navigate("/Home")
+      tienda.forEach(e => {
+        if (
+          found.liked?.includes(e.id)
+        ){
+          e.liked = true 
+        }else{
+          e.liked = false
+        }
+      })
+     
     } if (correo === "" || clave === ""){
       alert ("debe ingresar todos los datos")
       
@@ -33,7 +44,7 @@ const validarDatos = (e) =>{
     
   }
 }
-console.log(auth)
+
 
 
   return (

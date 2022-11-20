@@ -38,7 +38,7 @@ const Carrito = () => {
         <tr key={i}>
           <td><img src={producto.img} width="50" alt=""/></td>
           <td>{producto.name}</td>
-          <td>{(producto.price).toLocaleString("es-Cl")}</td>
+          <td>${(producto.price).toLocaleString("es-Cl")}</td>
           <td><Button variant="danger" onClick={() => decrement(i)}>-</Button>
               <b className ="mx-2">{producto.count}</b>
               <Button variant="primary" onClick={() => incrementar(i)}>+</Button></td>

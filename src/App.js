@@ -29,7 +29,9 @@ function App() {
     const [usuario, setUsuario] = useState([]); //para llamar datosde mi json usuarios
     const [agregarCar, setAgregarCar] = useState ([]); // para agregar a carrito de compra
     const [buscador, setBuscador] = useState(""); //para filtrar por nombredesde el buscador
-    const [auth,setAuth] = useState(null);  // para autenticar usuario
+    const [usu, setUsu] = useState (null);
+    const [auth,setAuth] = useState(false);  // para autenticar usuario
+    
 
 const getTienda = async () => {
     const res = await fetch ('http://localhost:3000/tienda.json')
@@ -50,6 +52,8 @@ const getTienda = async () => {
     getUsuarios();
     getTienda();
   }, []);
+
+  const logout = () =>  setAuth (false) 
 
 //funciones para el carrrito de compra
 
@@ -83,6 +87,7 @@ const decrement = (i) => {
 
 
 
+
   return (
     <div className="App">
       <Context.Provider 
@@ -91,24 +96,59 @@ const decrement = (i) => {
               buscador, setBuscador, 
               auth, setAuth,
               agregarCar, setAgregarCar,
-              incrementar, decrement, add
-              }}>
+              incrementar, decrement, add,
+              logout, setUsu, usu}}>
         <BrowserRouter>
         <Routes>
-        <Route index element={<InicioSecion/>} />
+        <Route path="/" element={<InicioSecion/>} />
         <Route path="/iniciosesion" element={<InicioSecion/>} />
         <Route path="/registro" element={<Registro />} />
-        <Route element={<PrivateRoute auth = {auth}/>}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/carrito" element={<Carrito />} />
-          <Route path="/vestidos" element={<Vestidos />}/>
-          <Route path="/Enteritos" element={<Enteritos />} />
-          <Route path="/Jardineras" element={<Jardineras />} />
-          <Route path="/Pantalon" element={<Pantalon />} />
-          <Route path="/miperfil" element={<MiPerfil />} />
-          <Route path="/crearPub" element={<CrearPub />}/>
-          <Route path="/detalle/:id" element={<Detalle />} />
-        </Route>
+       
+        <Route path="/home" element={
+          <PrivateRoute auth = {auth}>
+            <Home />
+          </PrivateRoute>
+        } />
+        <Route path="/carrito" element={
+           <PrivateRoute auth = {auth}>
+            <Carrito />
+          </PrivateRoute>
+        } />
+        <Route path="/vestidos" element={
+          <PrivateRoute auth = {auth}>
+            <Vestidos />
+          </PrivateRoute>
+        }/>
+        <Route path="/Enteritos" element={
+          <PrivateRoute auth = {auth}>
+            <Enteritos />
+          </PrivateRoute>
+        } />
+        <Route path="/Jardineras" element={
+          <PrivateRoute auth = {auth}>
+            <Jardineras />
+          </PrivateRoute>
+        } />
+        <Route path="/Pantalon" element={
+          <PrivateRoute auth = {auth}>
+            <Pantalon />
+          </PrivateRoute>
+        } />
+        <Route path="/miperfil" element={
+          <PrivateRoute auth = {auth}>
+            <MiPerfil />
+          </PrivateRoute>
+        } />
+        <Route path="/crearPub" element={
+          <PrivateRoute auth = {auth}>
+            <CrearPub />
+          </PrivateRoute>
+        }/>
+        <Route path="/detalle/:id" element={
+          <PrivateRoute auth = {auth}>
+            <Detalle />
+          </PrivateRoute>
+        } />
         </Routes>
         </BrowserRouter>
         </Context.Provider>
