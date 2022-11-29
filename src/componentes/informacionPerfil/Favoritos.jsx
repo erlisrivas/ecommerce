@@ -24,7 +24,7 @@ const Favoritos = () =>{
           <h4 >Mis Favoritos</h4>
         </div>
 
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" style ={{width: '300'}}>
         {tienda.filter((elem)=>elem.liked).map((elem) =>(
         <div className="col-12 col-md-6 col-lg-4 m-2" key={elem.id}>
         

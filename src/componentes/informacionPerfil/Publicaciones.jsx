@@ -4,8 +4,15 @@ import Context from "../../Context"
 import { useNavigate } from "react-router-dom";
 
 const Publicaciones = () => {
-  const{tienda} = useContext (Context);
+  const{tienda,setTienda} = useContext (Context);
   const Navigate = useNavigate ();
+
+
+  const borrar = (id) => {
+    const eliminar = tienda.findIndex((elem) => elem.id === id);
+    tienda.splice(eliminar, 1)
+    setTienda([...tienda]);
+    }
 
   return (
    <>
@@ -36,7 +43,7 @@ const Publicaciones = () => {
            <button className="button mb-2 mx-"
            to={`/detalle/${elem.id}`}
             onClick = {() => Navigate(`/detalle/${elem.id}`)}>Ver más</button>
-            <button>eliminar</button>
+            <button onClick = {() => borrar (elem.id)}>eliminar</button>
             </div>
             </div>
             </div>

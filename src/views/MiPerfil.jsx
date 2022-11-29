@@ -63,7 +63,7 @@ const MiPerfil = () => {
           <h4 >Información de usuario</h4>
         </div>
         <div className="contenedorPerfil d-flex mx-2">
-          <div className="barra-usuario h-100 ml-5">
+          <div className="barra-usuario h-100 ml-5" style ={{width: '500'}}>
             <div className="name-img d-flex justify-content-start">
               <img src={usu.photo} className="rounded-circle" height="52" width="52"
                   alt="" />

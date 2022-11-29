@@ -15,7 +15,7 @@ import Vestidos from "./views/Vestidos";
 import Jardineras from "./views/Jardineras";
 import Pantalon from "./views/Pantalon";
 import Carrito from "./views/Carrito";
-import CrearPub from "./views/CrearPub"
+import CrearPub from "./views/CrearPub";
 
 import {PrivateRoute} from "./componentes/PrivateRoute"
 

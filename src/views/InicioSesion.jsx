@@ -73,7 +73,7 @@ const InicioSecion = () => {
                 onChange = {(e) => setClave(e.target.value)}/>
               <label className="form-label" >Contraseña</label>
             </div>
-            {error?<p className="small text-danger p-0">Credenciales invalidas</p>: null}
+            {error?<p className="small text-danger p-0">Usuario no registrado</p>: null}
             <div className="row mb-4 mt-4">
               <div className="col">
               <a href="">¿Olvidaste tu contraseña?</a>
