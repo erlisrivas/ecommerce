@@ -49,9 +49,9 @@ const InicioSecion = () => {
 
     <div className="bodyLogin">
 
-      <div className="login">
+      <div className="login h-100">
 
-        <div className="login-form">
+        <div className="login-form h-100">
           <img className="mt-4"src={logoN} height="55" width="90" alt=""/>
           <br/>
           <p>Bienvenido a Marketplace</p>
