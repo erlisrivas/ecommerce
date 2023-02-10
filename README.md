@@ -19,7 +19,7 @@ Aplicación web con temática de marketplace, donde un determinado usuario una v
 </div>
 <br><br>
 
-<img src="https://github.com/erlisrivas/Pizzeria-react/blob/master/pizzeriaimg.png" width="400">
+<img src="https://github.com/erlisrivas/proyecto-react/blob/master/marketplace.png" width="400">
 
 
 ## [Ver aqui](https://proyecto-react-nine.vercel.app/)
