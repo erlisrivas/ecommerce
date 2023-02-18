@@ -1,6 +1,6 @@
 <h2>Marketplace</h2>
 
-Aplicación web con temática de marketplace, donde un determinado usuario una vez registrado puede crear publicaciones de articulos a la venta asi como tambien realizar compras, añadir favoritos, llevar un registro de compras y ventas, filtrar por nombre de articulo y ordenar los articulos por precio. 
+Aplicación web con temática de marketplace, donde un determinado usuario una vez registrado puede crear publicaciones de articulos a la venta así como también realizar compras, añadir favoritos, llevar un registro de compras y ventas, filtrar por nombre de artículo y ordenar los artículos por precio. 
 
 - *Se utilizó React Router para controlar rutas y redireccionamientos.*
 - *Se utilizó Context API para almacenar y modificar estados*
