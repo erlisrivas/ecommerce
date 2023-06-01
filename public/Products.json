@@ -1,0 +1,434 @@
+[
+   {  "id":"E1",
+      "sku": "EJ-001",
+      "name": "Ejemplo 1",
+      "image": "https://s3-us-west-2.amazonaws.com/im-prod-products-images/6902221292148_1-43d36414-1c39-4ca5-a46d-daa8a4aa8d76.jpg",
+      "price": 4990,
+      "stock": {
+         "1":{
+            "":6,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":0,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":0,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":0,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":0,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {  "id":"E2",
+      "sku": "EJ-002",
+      "name": "Ejemplo 2",
+      "image": "https://s3-us-west-2.amazonaws.com/im-prod-products-images/black-2-c4086f21-25ea-4896-8383-b640687cfb9c.jpg",
+      "price": 4990,
+      "stock": {
+         "1":{
+            "quantity":2,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":6,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":2,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":0,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":1,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {  "id":"E3",
+      "sku": "EJ-003",
+      "name": "Ejemplo 3",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/05/collarcod33fondolimpio.jpg",
+      "price": 3990,
+      "stock": {
+         "1":{
+            "quantity":0,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":0,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":1,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":1,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":1,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {  "id":"E4",
+      "sku": "EJ-004",
+      "name": "Ejemplo 4",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/05/pack3Kilos-4Bolsa3Kg-fondoblanco-1.png",
+      "price": 7990,
+      "stock": {
+         "1":{
+            "quantity":0,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":0,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":0,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":0,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":0,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {"id":"E5",
+      "sku": "EJ-005",
+      "name": "Ejemplo 5",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/04/WhatsAppImage2023-03-14at17.16.05-1.jpg",
+      "price": 14990,
+      "stock": {
+         "1":{
+            "quantity":0,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":0,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":0,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":0,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":0,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {
+      "id":"E6",
+      "sku": "EJ-006",
+      "name": "Ejemplo 6",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/05/pack3Kilos-3Bolsa3Kg-fondoblanco_2-1.png",
+      "price": 8990,
+      "stock": {
+         "1":{
+            "quantity":6,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":4,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":7,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":8,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":10,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {"id":"E7",
+      "sku": "EJ-007",
+      "name": "Ejemplo 7",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/05/pack3Kilos-3Bolsa3Kg-fondoblanco_2-1.png",
+      "price": 12990,
+      "stock": {
+         "1":{
+            "quantity":0,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":9,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":7,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":7,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":2,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {
+      "id":"E8",
+      "sku": "EJ-008",
+      "name": "Ejemplo 8",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/04/NewCPAdulto3kfondoblanco_a2b1f73d-1aef-475e-8faa-7fb147611dc2-4.png",
+      "price": 15990,
+      "stock": {
+         "1":{
+            "quantity":2,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":2,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":2,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":0,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":6,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {"id":"E9",
+      "sku": "EJ-009",
+      "name": "Ejemplo 9",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/05/dentalmockupfondoblanco4x3.jpg",
+      "price": 5990,
+      "stock": {
+         "1":{
+            "quantity":2,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":0,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":5,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":0,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":3,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   },
+   {"id":"E10",
+      "sku": "EJ-010",
+      "name": "Ejemplo 10",
+      "image": "https://mercado.ripleylabs.com/wp-content/uploads/2023/05/HG00007_1.png",
+      "price": 11990,
+      "stock": {
+         "1":{
+            "quantity":0,
+            "local":{
+               "id":"1",
+               "name":"lo barnechea"
+            }
+         },
+         "2":{
+            "quantity":0,
+            "local":{
+               "id":"2",
+               "name":"chicureo"
+            }
+         },
+         "3":{
+            "quantity":5,
+            "local":{
+               "id":"3",
+               "name":"la reina"
+            }
+         },
+         "4":{
+            "quantity":5,
+            "local":{
+               "id":"4",
+               "name":"viña del mar"
+            }
+         },
+         "5":{
+            "quantity":0,
+            "local":{
+               "id":"5",
+               "name":"maipú"
+            }
+         }
+      }
+   }
+]

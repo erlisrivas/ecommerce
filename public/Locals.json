@@ -1,0 +1,28 @@
+[
+   {
+      "id":"1",
+      "name":"lo barnechea",
+      "link": "/lobarnechea"
+   },
+   {
+      "id":"2",
+      "name":"chicureo",
+      "link": "/chicureo"
+   },
+   {
+      "id":"3",
+      "name":"la reina",
+      "link": "/lareina"
+      
+   },
+   {
+      "id":"4",
+      "name":"viña del mar",
+      "link": "/vdelmar"
+   },
+   {
+      "id":"5",
+      "name":"maipú",
+      "link": "/maipu"
+   }
+]

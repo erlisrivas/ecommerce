@@ -5,27 +5,31 @@ import { useNavigate } from "react-router-dom";
 import React, {useContext} from 'react'
 import Context from '../Context'
 
-import Footer from '../componentes/Footer'
-import NavBar from "../componentes/NavBar"
 
 
 const Carrito = () => {
-  const {agregarCar, incrementar, decrement} = useContext (Context);
+  const {addToCar, increase, decrease, total} = useContext (Context);
   const Navigate = useNavigate ();
 
-  const total = agregarCar.reduce((a, {count, price}) => a + price*count, 0);
+  const totalToBuy = addToCar.reduce((a, {count, price}) => a + price*count, 0);
   
 
   return (
     <>
-    <NavBar/>
 
-    <div className="container d-flex justify-content-center mt-3 mx-4">
-      <h5 className="titleCat">Detalles del pedido</h5>
+    <div className="container d-flex justify-content-center mt-4 mx-4">
+      <h5 className="fw-bolder" sytyle={{color:"#4d4d4d"}}>Detalles del pedido</h5>
     </div>
     <hr/>
-    <div className ="carrito p-5">
-      <div className="detalles bg-ligth w-75 m-auto p-5">
+    <div className="ms-5">
+      <h6>
+        Tu carro tiene: <sanp className="text-secondary">{total} productos</sanp>
+      </h6>
+    </div>
+
+    <div className="row m-4 justify-content-center">
+    <div className ="col-md-8 carrito p-2">
+      <div className="detalles bg-ligth w-75 m-2 p-3 justify-content-center aling-items-center">
         <div className="table-responsive">
           <Table>
             <thead className ="TableHead">
@@ -38,14 +42,14 @@ const Carrito = () => {
             </tr>
             </thead>
             <tbody className='tableBody'>
-            {agregarCar.map((producto, i) => (
+            {addToCar.map((producto, i) => (
             <tr key={i}>
-              <td><img src={producto.img} width="50" alt=""/></td>
+              <td><img src={producto.image} width="50" alt=""/></td>
               <td>{producto.name}</td>
               <td>${(producto.price).toLocaleString("es-Cl")}</td>
-              <td><Button variant="danger" onClick={() => decrement(i)}>-</Button>
+              <td><Button className="text-dark text-center" style={{ backgroundColor: '#f1f1f1', borderColor:"gray", width:"1.5rem"}} onClick={() => decrease(i)}>-</Button>
                 <b className ="mx-2">{producto.count}</b>
-                <Button variant="primary" onClick={() => incrementar(i)}>+</Button></td>
+                <Button className="text-dark text-center" style={{ backgroundColor: '#f1f1f1', borderColor:"gray", width:"1.5rem"}} onClick={() => increase(i)}>+</Button></td>
               <td>${(producto.price*producto.count).toLocaleString("es-Cl")}</td>
             </tr>
         ))}
@@ -54,16 +58,28 @@ const Carrito = () => {
       </div>
 
       <div className = "d-flex justify-content-end ">
-        <h3 className="my-4">Total: ${total.toLocaleString("es-Cl")}</h3>
+        <h3 className="my-4">Total: ${totalToBuy.toLocaleString("es-Cl")}</h3>
       </div>
       <div className="d-flex justify-content-between mt-2">
-        <Button variant="success" onClick = {() => Navigate("/Home")}>Seguir Comprando</Button>
-        <Button variant="success">Finalizar Compra</Button>
+        <Button style={{ backgroundColor: '#e54b0e', border:"none"}} onClick = {() => Navigate("/")}>Seguir Comprando</Button>
+        
       </div>
 
     </div>
   </div>
-  <Footer/>
+  <div className="col-6 col-md-4 p-2 justify-content-center aling-items-center mt-5">
+    <h5>Resumen de Compra</h5>
+    <hr/>
+    <p>Costo de tus productos: <span>${totalToBuy.toLocaleString("es-Cl")}</span></p> 
+    <hr/>
+    <p className="fw-bolder">Cupon de descuento:</p>
+    <hr/>
+    <h5 className="fw-bolder">Tolal a pagar:<span>${totalToBuy.toLocaleString("es-Cl")}</span></h5>
+   
+    <Button className="mt-5"style={{ backgroundColor: '#e54b0e', border:"none", width: '20rem'}} >Finalizar Compra</Button>
+  </div>
+  </div>
+ 
     </>
   )
 }

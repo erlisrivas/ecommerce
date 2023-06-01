@@ -1,17 +1,3 @@
-.titleCat{
-    color: #b279cf;
-    font-weight: 900;
-}
-.nombreP{
-    color: #b279cf;
-    font-style: italic;
-}
-.nombreCat{
-    color: #a412ec;
-    font-style: italic;
-}
-
-   
 
 @media (max-width: 800px){
     .cardInfo{

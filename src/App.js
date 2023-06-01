@@ -4,146 +4,122 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {useState, useEffect } from 'react';
 import Context from './Context';
 
-
-import Registro from "./views/Registro";
-import InicioSesion from './views/InicioSesion';
 import Home from "./views/Home"
-import MiPerfil from "./views/MiPerfil";
 import Detalle from "./views/Detalle";
-import Enteritos from "./views/Enteritos";
-import Vestidos from "./views/Vestidos";
-import Jardineras from "./views/Jardineras";
-import Pantalon from "./views/Pantalon";
 import Carrito from "./views/Carrito";
-import CrearPub from "./views/CrearPub";
+import NavBar from './componentes/NavBar';
+import Footer from './componentes/Footer';
+import Chicureo from './views/LocalesViews/Chicureo';
+import Lareina from './views/LocalesViews/Lareina';
+import LoBarnechea from './views/LocalesViews/LoBarnechea';
+import Maipu from './views/LocalesViews/Maipu';
+import VdelMar from './views/LocalesViews/VdelMar';
 
-import {PrivateRoute} from "./componentes/PrivateRoute"
+
 
 
 function App() {
 
-    const [tienda, setTienda] = useState([]); //para llamar datos de mi json tienda
-    const [usuario, setUsuario] = useState([]); //para llamar datosde mi json usuarios
-    const [agregarCar, setAgregarCar] = useState ([]); // para agregar a carrito de compra
-    const [buscador, setBuscador] = useState(""); //para filtrar por nombre desde el buscador
-    const [usu, setUsu] = useState (null); //para guardar usuario al iniciar sesion
-    const [auth,setAuth] = useState(false);  // para autenticar usuario
+    const [product, setProduct] = useState([]); //para llamar datos de mi json Products
+    const [local, setLocal] = useState([]); //para llamar datos de mi json Locals
+    const [addToCar, setAddToCar] = useState ([]); // para agregar a carrito de compra
+    const [search, setSearch] = useState(""); //para filtrar por nombre desde el buscador
+    const[selectedLocal, setSelectedLocal] = useState("");
+    const [filteredProducts, setFilteredProducts] = useState([]);
   
-    
-//llamado de json tienda
-    const getTienda = async () => {
-      const res = await fetch ('https://proyecto-react-nine.vercel.app/tienda.json');
+
+    const getProduct = async () => {
+      const res = await fetch ('./Products.json');
       const data = await res.json();
-      setTienda(data);
+      setProduct(data);
+      setFilteredProducts(data);
       //console.log(data);
     };
 
-//llamado de json usuarios
-    const getUsuarios = async () => {
-      const res = await fetch ('https://proyecto-react-nine.vercel.app/usuarios.json')
+    const getLocal = async () => {
+      const res = await fetch ('./Locals.json')
       const data = await res.json()
-      setUsuario(data);
+      setLocal(data);
     //console.log(data);
     };
 
     useEffect(() => {
-      getUsuarios();
-      getTienda();
+      getLocal();
+      getProduct();
     }, []);
 
 //funciones para el carrrito de compra
 
-const add = ({id, price, name, img}) => {
-  const productoEncontradoIndex = agregarCar.findIndex((p) => p.id === id);
-  const producto = {id, price, name, img, count: 1};
+const add = ({id, sku, price, name, image}) => {
+  const productoEncontradoIndex = addToCar.findIndex((p) => p.id === id);
+  const producto = {id, sku, price, name, image, count: 1};
+  
 
   if (productoEncontradoIndex >= 0){
-    agregarCar[productoEncontradoIndex].count++;
-    setAgregarCar([...agregarCar]);
+    addToCar[productoEncontradoIndex].count++;
+    setAddToCar([...addToCar]);
   } else{
-    setAgregarCar ([...agregarCar, producto]);
+    setAddToCar ([...addToCar, producto]);
     }
+    console.log(producto)
   };
 
-  const incrementar = (i) => {
-    agregarCar[i].count++;
-  setAgregarCar([...agregarCar]);
+  const increase = (i) => {
+    addToCar[i].count++;
+  setAddToCar([...addToCar]);
   };
 
-  const decrement = (i) => {
-    const {count} = agregarCar[i];
+  const decrease = (i) => {
+    const {count} = addToCar[i];
     if (count === 1) {
-    agregarCar.splice(i, 1);
+    addToCar.splice(i, 1);
     } else {
-    agregarCar[i].count--;
+    addToCar[i].count--;
     }
-  setAgregarCar([...agregarCar]);
+  setAddToCar([...addToCar]);
   };
+
+  //contador para carrito de compra
+  const total = addToCar.reduce(
+    (count) => count+1, 0);
+
+    //capturar información de barra de busqueda
+  const seacher = (e) => {
+    setSearch(e.target.value)
+    console.log (e.target.value)
+  };
+
 
   return (
     <div className="App">
       <Context.Provider 
-      value ={{tienda, setTienda, 
-              usuario, setUsuario, 
-              buscador, setBuscador, 
-              auth, setAuth,
-              agregarCar, setAgregarCar,
-              incrementar, decrement, add,
-              usu, setUsu}}>
-
+      value ={{product, setProduct, 
+              local, setLocal, 
+              search, setSearch, 
+              addToCar, setAddToCar,
+              increase, decrease, add,
+              total, seacher,
+              selectedLocal, setSelectedLocal,
+              filteredProducts, setFilteredProducts
+             }}>
+      
         <BrowserRouter>
+        <NavBar/>
         <Routes>
-        <Route path="/" element={<InicioSesion/>} />
-        <Route path="/iniciosesion" element={<InicioSesion/>} />
-        <Route path="/registro" element={<Registro />} />
-       
-        <Route path="/home" element={
-          <PrivateRoute auth = {auth}>
-            <Home />
-          </PrivateRoute>
-        } />
-        <Route path="/carrito" element={
-           <PrivateRoute auth = {auth}>
-            <Carrito />
-          </PrivateRoute>
-        } />
-        <Route path="/vestidos" element={
-          <PrivateRoute auth = {auth}>
-            <Vestidos />
-          </PrivateRoute>
-        }/>
-        <Route path="/Enteritos" element={
-          <PrivateRoute auth = {auth}>
-            <Enteritos />
-          </PrivateRoute>
-        } />
-        <Route path="/Jardineras" element={
-          <PrivateRoute auth = {auth}>
-            <Jardineras />
-          </PrivateRoute>
-        } />
-        <Route path="/Pantalon" element={
-          <PrivateRoute auth = {auth}>
-            <Pantalon />
-          </PrivateRoute>
-        } />
-        <Route path="/miperfil" element={
-          <PrivateRoute auth = {auth}>
-            <MiPerfil />
-          </PrivateRoute>
-        } />
-        <Route path="/crearPub" element={
-          <PrivateRoute auth = {auth}>
-            <CrearPub />
-          </PrivateRoute>
-        }/>
-        <Route path="/detalle/:id" element={
-          <PrivateRoute auth = {auth}>
-            <Detalle />
-          </PrivateRoute>
-        } />
+        <Route path="/" element={<Home />} />
+        <Route path="/carrito" element={<Carrito />} />
+        <Route path="/detalle/:id" element={<Detalle />} />
+        <Route path="/chicureo" element={<Chicureo />} />
+        <Route path="/lareina" element={<Lareina />} />
+        <Route path="/lobarnechea" element={<LoBarnechea />} />
+        <Route path="/maipu" element={<Maipu />} />
+        <Route path="/vdelmar" element={<VdelMar />} />
+
+
         </Routes>
+        <Footer/>
         </BrowserRouter>
+        
         </Context.Provider>
       
      
