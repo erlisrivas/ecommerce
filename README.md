@@ -10,8 +10,10 @@ Este proyecto fue creado con React. Se desarrollo una aplicación web que me mue
 
 ## Running Proyect
 
+```
 npm install
 npm start
+```
 
 
 ### :hammer_and_wrench: languages and tools:
