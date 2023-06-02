@@ -1,11 +1,17 @@
-<h2>Marketplace</h2>
+<h2>Prueba Técnica</h2>
 
-Aplicación web con temática de marketplace, donde un determinado usuario una vez registrado puede crear publicaciones de articulos a la venta así como también realizar compras, añadir favoritos, llevar un registro de compras y ventas, filtrar por nombre de artículo y ordenar los artículos por precio. 
+Este proyecto fue creado con React. Se desarrollo una aplicación web que me muestra un catalogo de productos general (con precio, sku, nombre e imagen), cuenta con carrito de compras y una vista detalle del producto donde puedo visualizar el stock disponible del producto dependiendo del local seleccionado para asi poder añadir al carro siempre que cuente con stock.
 
-- *Se utilizó React Router para controlar rutas y redireccionamientos.*
-- *Se utilizó Context API para almacenar y modificar estados*
-- *Se trabajo con JavaScript para dar funcionalidad a la web*
+## Dependencies utilizadas
 
+- React
+- [React Router](https://reactrouter.com/en/main)
+-  [React Bootstrap](https://react-bootstrap.github.io/)
+
+## Running Proyect
+
+npm install
+npm start
 
 
 ### :hammer_and_wrench: languages and tools:
@@ -18,11 +24,6 @@ Aplicación web con temática de marketplace, donde un determinado usuario una v
  <img src="https://www.freeiconspng.com/uploads/github-icon-1.png" title="Github" **alt="Github" width="40" height="40"/>
 </div>
 <br><br>
-
-<img src="https://github.com/erlisrivas/proyecto-react/blob/master/marketplace.png" width="400">
-
-
-## [Ver aqui](https://proyecto-react-nine.vercel.app/)
 
 
 

@@ -37,7 +37,6 @@ const Cards = ({filterP}) => {
              </div>
              
                 <hr/>
-                
                 <h5 className="text-center text-danger pb-3">
                      $ {filterP.price.toLocaleString("es-Cl")}
                 </h5>

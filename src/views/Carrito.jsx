@@ -5,15 +5,12 @@ import { useNavigate } from "react-router-dom";
 import React, {useContext} from 'react'
 import Context from '../Context'
 
-
-
 const Carrito = () => {
   const {addToCar, increase, decrease, total} = useContext (Context);
   const Navigate = useNavigate ();
 
   const totalToBuy = addToCar.reduce((a, {count, price}) => a + price*count, 0);
   
-
   return (
     <>
 
@@ -28,9 +25,9 @@ const Carrito = () => {
     </div>
 
     <div className="row m-4 justify-content-center">
-    <div className ="col-md-8 carrito p-2">
-      <div className="detalles bg-ligth w-75 m-2 p-3 justify-content-center aling-items-center">
-        <div className="table-responsive">
+      <div className ="col-md-8 carrito p-2">
+        <div className="detalles bg-ligth w-75 m-2 p-3 justify-content-center aling-items-center">
+          <div className="table-responsive">
           <Table>
             <thead className ="TableHead">
             <tr>
@@ -62,9 +59,7 @@ const Carrito = () => {
       </div>
       <div className="d-flex justify-content-between mt-2">
         <Button style={{ backgroundColor: '#e54b0e', border:"none"}} onClick = {() => Navigate("/")}>Seguir Comprando</Button>
-        
       </div>
-
     </div>
   </div>
   <div className="col-6 col-md-4 p-2 justify-content-center aling-items-center mt-5">
